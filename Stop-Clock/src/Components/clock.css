@@ -132,7 +132,7 @@ body {
 /* Button Group */
 .buttons {
   display: flex;
-  justify-content: space-between; /* Make buttons side by side */
+  justify-content: space-between;
   gap: 10px;
   margin-top: 20px;
   width: 100%;
@@ -209,9 +209,11 @@ body {
   }
 
   .buttons {
-    flex-direction: column; /* Stack buttons on top of each other */
-    gap: 15px;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
   }
 
   .buttons button {
@@ -232,6 +234,12 @@ body {
 
 /* For devices with width 600px - 768px (Small Tablets) */
 @media (max-width: 768px) and (min-width: 601px) {
+  .header{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   .home {
     width: 90px;
     height: 30px;
@@ -242,6 +250,14 @@ body {
     width: 110px;
     height: 45px;
   }
+
+  .buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
+ }
 
   .buttons button {
     width: 70px;
@@ -276,6 +292,14 @@ body {
   .darkLight {
     width: 120px;
     height: 50px;
+  }
+
+  .buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+  width: 100%;
   }
 
   .buttons button {
