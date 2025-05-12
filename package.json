@@ -9,7 +9,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "A simple Stop Clock application built with React. This app allows users to start, stop, and reset a timer.",
   "dependencies": {
     "aos": "^2.3.4",
     "bootstrap": "^5.3.6",
