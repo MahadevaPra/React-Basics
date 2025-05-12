@@ -56,6 +56,16 @@
   color: #212529 !important;
 }
 
+/* Navbar link color adjustments for dark theme */
+.outer.dark .navbar {
+  background-color: #343a40 !important;
+}
+
+.outer.dark .navbar .navbar-brand,
+.outer.dark .navbar .nav-link {
+  color: #ffffff !important;
+}
+
 /* Navbar link hover effect */
 .nav-link:hover {
   text-decoration: underline;
@@ -77,10 +87,15 @@
   .navbar-nav {
     flex-direction: column;
     align-items: flex-start;
+    width: 100%;
   }
 
   .navbar-nav .nav-item {
-    margin: 5px 0;
+    margin: 10px 0;
+  }
+
+  .navbar-nav .nav-link {
+    color: #212529;  /* For light theme */
   }
 
   .navbar-toggler {
@@ -105,6 +120,18 @@
   .container {
     padding: 20px 10px;
   }
+
+  /* Make navbar links more visible in light theme */
+  .outer.light .navbar .navbar-brand,
+  .outer.light .navbar .nav-link {
+    color: #212529 !important;  /* Dark text for better contrast in light theme */
+  }
+
+  /* Make navbar links more visible in dark theme */
+  .outer.dark .navbar .navbar-brand,
+  .outer.dark .navbar .nav-link {
+    color: #ffffff !important;  /* White text for better contrast in dark theme */
+  }
 }
 
 /* For tablets (max-width: 768px) */
@@ -119,7 +146,7 @@
   }
 
   .navbar-nav .nav-item {
-    margin: 5px 0;
+    margin: 10px 0;
   }
 
   .darkLight {
