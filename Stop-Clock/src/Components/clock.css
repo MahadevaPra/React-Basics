@@ -261,6 +261,12 @@ body {
 
 /* For devices with width 768px - 1024px (Tablets) */
 @media (max-width: 2200px) and (min-width: 769px) {
+  .header{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
   .home {
     width: 100px;
     height: 35px;
