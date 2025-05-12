@@ -5,8 +5,10 @@ import About from './Components/About';
 import Contact from './Components/Contact';
 import PaP from './Components/PrivacyandPolicy';
 import TaC from './Components/TermsandConditions';
+import Footer from './Components/Footer'
 import Clock from './Components/Clock';
-import NoPage from './Components/Nopage'
+import NoPage from './Components/Nopage';
+
 
 function App() {
   return (
@@ -24,6 +26,7 @@ function App() {
         <Route path='/stopclock' element={<Clock />}/>
         <Route path='*' element={<NoPage />} />
       </Routes>
+       <Footer />
     </BrowserRouter>
   );
 }
