@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom'
 
 const imageStyle = {
   width: '75%',
@@ -77,6 +78,11 @@ const Home = () => {
             Take charge with precision timing at your fingertips.
           </p>
         </div>
+      </div>
+     <div className="text-center mt-4">
+        <Link to='/stopclock'>
+          <button className="btn btn-primary btn-lg">Use StopClock</button>
+        </Link>
       </div>
     </div>
   );

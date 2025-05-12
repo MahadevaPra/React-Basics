@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom'
 function Timer() {
   const [count, setCount] = useState(0);
   const [running, setRunning] = useState(false);
+  const [pause, setPause] = useState(false);
   const [time, setTime] = useState({ hh: 0, mm: 0, ss: 0 });
   const [theme, setTheme] = useState('dark');
 
@@ -29,10 +30,17 @@ function Timer() {
     setTime({ hh, mm, ss });
   }, [count]);
 
-  const handleIntervalStart = () => setRunning(true);
-  const handleIntervalPause = () => setRunning(false);
+  const handleIntervalStart = () => {
+    setRunning(true);
+    setPause(false);
+  }
+  const handleIntervalPause = () => {
+    setRunning(false);
+    setPause(true);
+  }
   const handleIntervalReset = () => {
     setRunning(false);
+    setPause(false);
     setCount(0);
   };
   const handleTheme = () => setTheme(prev => (prev === 'dark' ? 'light' : 'dark'));
@@ -42,7 +50,11 @@ function Timer() {
   return (
     <div className={`outer ${theme}`}>
       <div className='header'>
-        <Link to='/'><button className={`home ${theme}`}>Home</button></Link>
+       <Link to='/'>
+          <button className={`btn btn-sm home ${theme === 'dark' ? 'light' : 'dark'}`}>
+            Home
+          </button>
+       </Link>
         <button className='darkLight' onClick={handleTheme}>
           {theme === 'dark' ? <span className='circle'>🌙</span> : <span className='circle'>☀️</span>}
         </button>
@@ -53,9 +65,9 @@ function Timer() {
           <h2>{Time}</h2>
         </div>
         <div className='buttons'>
-          <button className='btn btn-primary' onClick={handleIntervalStart}>Start</button>
-          <button className='btn btn-danger' onClick={handleIntervalPause}>Pause</button>
-          <button className='btn btn-success' onClick={handleIntervalReset}>Reset</button>
+          <button id='start' onClick={handleIntervalStart}>{pause ? 'Restart' : 'Start'}</button>
+          <button id='pause' onClick={handleIntervalPause}>Pause</button>
+          <button id='restart' onClick={handleIntervalReset}>Reset</button>
         </div>
      </div>
     </div>

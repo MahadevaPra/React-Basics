@@ -14,29 +14,33 @@ body {
     align-items: center;
     transition: all 0.4s ease;
   }
+  
   .header{
+    margin-left: 15px;
     width: 100vw;
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
 
-  .home.dark{
-    width: 100px;
-    height: 30px;
-    border-radius: 10px;
-    background-color: rgb(58, 122, 240);
-    color: rgb(231, 217, 206);
-    font-size: 18px;
-  }
+  .home {
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: 18px;
+  border: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-  .home.light{
-    width: 100px;
-    height: 30px;
-    border-radius: 10px;
-    background-color: rgb(241, 148, 93);
-    color: rgb(30, 105, 210);
-     font-size: 18px;
-  }
+.home.dark {
+  background-color: rgb(58, 122, 240);
+  color: rgb(231, 217, 206);
+}
+
+.home.light {
+  background-color: rgb(241, 148, 93);
+  color: rgb(30, 105, 210);
+}
 
   /* Dark Theme */
   .outer.dark {
@@ -166,8 +170,8 @@ body {
     border: 1.5px solid whitesmoke;
   }
   
-  .outer.dark #Pause:hover,
-  .outer.light #Pause:hover {
+  .outer.dark #pause:hover,
+  .outer.light #pause:hover {
     background-color: rgb(242, 40, 40);
     color: white;
     border: 1.5px solid whitesmoke;
