@@ -1,10 +1,8 @@
-/* layout.css */
-
 /* Base styles for the layout container */
-/* .outer {
+.outer {
   min-height: 100vh;
   transition: background-color 0.3s ease, color 0.3s ease;
-} */
+}
 
 /* Dark theme styles */
 .outer.dark {
@@ -66,4 +64,102 @@
 /* Responsive spacing for container */
 .container {
   padding-bottom: 60px; /* To avoid overlap with fixed button */
+}
+
+/* Responsive Styles */
+
+/* For mobile devices (max-width: 576px) */
+@media (max-width: 576px) {
+  .navbar-collapse {
+    justify-content: flex-start;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 5px 0;
+  }
+
+  .navbar-toggler {
+    border-color: #6c757d;
+  }
+
+  .navbar-toggler-icon {
+    background-color: #6c757d;
+  }
+
+  .darkLight {
+    bottom: 10px;
+    right: 10px;
+    width: 45px;
+    height: 45px;
+  }
+
+  .darkLight .circle {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 20px 10px;
+  }
+}
+
+/* For tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .navbar-collapse {
+    justify-content: flex-start;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 5px 0;
+  }
+
+  .darkLight {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .darkLight .circle {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 30px 20px;
+  }
+}
+
+/* For larger screens (min-width: 768px) */
+@media (min-width: 768px) {
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 0 15px;
+  }
+
+  .darkLight {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .darkLight .circle {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 30px;
+  }
 }
