@@ -14,15 +14,16 @@ body {
   justify-content: center;
   align-items: center;
   transition: all 0.4s ease;
+  padding: 20px;
 }
 
 /* Header layout */
 .header {
-  margin-left: 15px;
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 /* Home Button Styling */
@@ -62,9 +63,6 @@ body {
   height: 50px;
   border-radius: 25px;
   position: relative;
-  margin-bottom: 20px;
-  align-self: flex-end;
-  margin-right: 20px;
   cursor: pointer;
   border: none;
   transition: all 0.3s ease;
@@ -134,9 +132,10 @@ body {
 /* Button Group */
 .buttons {
   display: flex;
-  justify-content: center;
+  justify-content: space-between; /* Make buttons side by side */
   gap: 10px;
   margin-top: 20px;
+  width: 100%;
 }
 
 /* Common button styles */
@@ -193,9 +192,9 @@ body {
   }
 
   .header {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .home {
@@ -210,8 +209,9 @@ body {
   }
 
   .buttons {
-    flex-direction: column;
+    flex-direction: column; /* Stack buttons on top of each other */
     gap: 15px;
+    align-items: center;
   }
 
   .buttons button {
@@ -260,7 +260,7 @@ body {
 }
 
 /* For devices with width 768px - 1024px (Tablets) */
-@media (max-width: 1024px) and (min-width: 769px) {
+@media (max-width: 2200px) and (min-width: 769px) {
   .home {
     width: 100px;
     height: 35px;
